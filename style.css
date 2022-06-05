@@ -1,0 +1,136 @@
+:root{
+    --background-color: #1C1E21;
+    --color-text: #FFFF;
+    --color-ball:#2e3236;
+    --color-ball-on:#0ec02c;
+    --color-ball-off:#b11313;
+}
+*{
+    font-style: none;
+    text-decoration: none;
+    list-style: none;
+}
+body, tr, td, th{
+    background-color: var(--background-color);
+    color: var(--color-text);
+    
+
+}
+.centro{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contentCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.dado{
+    animation: mymove 0.5s ease-out infinite;
+}
+
+.content-btn{
+    top: 70%;
+}
+.dado-block{
+    animation: blockDado 0.5s ease-out infinite;
+}
+.focos{
+    display: flex;
+    width: 250px;
+}
+.ball{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--color-ball-on);
+}
+.ballOn{
+    animation: focoParpadeoOn 2s ease infinite;
+}
+
+.ballOff{
+    background-color: var(--color-ball-off);
+    animation: focoParpadeoOff 2s ease infinite;
+}
+
+
+
+@keyframes mymove {
+    0%{
+        transform: rotate(1800deg);
+    }
+    25%{
+        transform: rotate(260deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    75%{
+        transform: rotate(260deg);
+    }
+    80%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+
+@keyframes blockDado {
+    0%{
+        transform: translateX(0px);
+    }
+    25%{
+        transform: translateX(-15px);
+    }
+    50%{
+        transform: translateX(15px);
+    }
+    75%{
+        transform: translateX(-15px);
+    }
+    100%{
+        transform: translateX(15px);
+    }
+    
+}
+
+
+@keyframes focoParpadeoOn {
+    0%{
+        box-shadow: 0 0 3px #05ff2f, 0 0 4px #05ff2f, 0 0 5px var(--color-ball-on) ;
+    }
+    25%{
+        box-shadow: 0 0 10px #05ff2f, 0 0 2px #05ff2f, 0 0 15px var(--color-ball-on) ;
+    }
+    50%{
+        box-shadow: 0 0 3px #05ff2f, 0 0 4px #05ff2f, 0 0 5px var(--color-ball-on) ;
+    }
+    75%{
+        box-shadow: 0 0 10px #05ff2f, 0 0 2px #05ff2f, 0 0 15px var(--color-ball-on) ;
+    }
+    
+}
+
+@keyframes focoParpadeoOff {
+    0%{
+        box-shadow: 0 0 3px #cf4646, 0 0 4px #ff0000, 0 0 5px var(--color-ball-f) ;
+    }
+    25%{
+        box-shadow: 0 0 10px #cf4646, 0 0 2px #ff0000, 0 0 15px var(--color-ball-off) ;
+    }
+    50%{
+        box-shadow: 0 0 3px #cf4646, 0 0 4px #ff0000, 0 0 5px var(--color-ball-off) ;
+    }
+    75%{
+        box-shadow: 0 0 10px #cf4646, 0 0 2px #ff0000, 0 0 15px var(--color-ball-off) ;
+    }
+    
+}
