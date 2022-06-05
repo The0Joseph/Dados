@@ -37,7 +37,7 @@ function setfocos(id, style){
 
 btnJugar.addEventListener('click', function(){
     btnJugar.disabled = true;
-    dadito.src = "dadoO.png"
+    dadito.src = "../img/dadoO.svg"
     id++;
     if (id > 3) {
         dadito.classList.add('dado-block');
